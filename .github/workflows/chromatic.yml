@@ -5,24 +5,16 @@ on:
   push:
     branches: [ master ]
 
-# what the action will do
 jobs:
   test:
-    # the operating system it will run on
     runs-on: ubuntu-latest
-    # the list of steps that the action will go through
     steps:
-      - uses: actions/checkout@v2
-
-      - uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: install # will run `yarn install` command
-
-      - uses: chromaui/action@v1
-        # options required to the GitHub chromatic action
-        with:
-          # our project token, to see how to obtain it
-          # refer to https://www.learnstorybook.com/intro-to-storybook/react/en/deploy/
-          projectToken: ${{ secrets.CHROMATIC_TOKEN }}
-          token: ${{ secrets.CHROMATIC_TOKEN }}
-          cmd: chromatic --project-token=${{ secrets.CHROMATIC_TOKEN }}
+    - uses: actions/checkout@v1
+    - run: |
+        yarn && yarn build
+    - uses: chromaui/action@v1
+      with: 
+        # refer to https://www.learnstorybook.com/intro-to-storybook/react/en/deploy/
+        # https://github.com/chromaui/action
+        projectToken: ${{ secrets.CHROMATIC_TOKEN }}
+        token: ${{ secrets.GIT_TOKEN }}

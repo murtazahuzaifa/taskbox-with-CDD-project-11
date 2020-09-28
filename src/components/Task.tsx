@@ -27,7 +27,7 @@ const Task: FC<PropType> = ({ task: { id, title, state }, onPinTask, onArchiveTa
 
             <div className="actions" onClick={event => event.stopPropagation()} >
                 {state !== 'TASK_ARCHIVED' && (
-                    <a onClick={() => { onPinTask(id) }} >
+                    <a href='#/' onClick={(e) => {e.preventDefault() ;onPinTask(id) }} >
                         <span className="icon-star" />
                     </a>
                 )}
