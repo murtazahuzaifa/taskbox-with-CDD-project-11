@@ -6,9 +6,10 @@ import { TaskType } from '../components/Task';
 const defaultTasks: { tasks: TaskType[] } = {
     tasks: [
         { id: '1', title: 'Something', state: 'TASK_INBOX', updatedAt: new Date() },
-        { id: '2', title: 'Something more', state: 'TASK_INBOX', updatedAt: new Date() },
-        { id: '3', title: 'Something else', state: 'TASK_INBOX', updatedAt: new Date() },
-        { id: '4', title: 'Something again', state: 'TASK_INBOX', updatedAt: new Date() },
+        { id: '2', title: 'Something new', state: 'TASK_INBOX', updatedAt: new Date() },
+        { id: '3', title: 'Something more', state: 'TASK_INBOX', updatedAt: new Date() },
+        { id: '4', title: 'Something else', state: 'TASK_INBOX', updatedAt: new Date() },
+        { id: '5', title: 'Something again', state: 'TASK_INBOX', updatedAt: new Date() },
     ]
 }
 

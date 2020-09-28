@@ -1,7 +1,9 @@
 # name of our action
 name: 'Storybook Deployment on Chromatic'
 # the event that will trigger the action
-on: push
+on:
+  push:
+    branches: [ master ]
 
 # what the action will do
 jobs:
@@ -10,12 +12,17 @@ jobs:
     runs-on: ubuntu-latest
     # the list of steps that the action will go through
     steps:
-      - uses: actions/checkout@v1
-      - run: yarn
+      - uses: actions/checkout@v2
+
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install # will run `yarn install` command
+
       - uses: chromaui/action@v1
         # options required to the GitHub chromatic action
         with:
           # our project token, to see how to obtain it
           # refer to https://www.learnstorybook.com/intro-to-storybook/react/en/deploy/
           # projectToken: project-token
-          token: ${{ secrets.CHROMATIC_TOKEN }}
+          # token: ${{ secrets.CHROMATIC_TOKEN }}
+          cmd: chromatic --project-token=${{ secrets.CHROMATIC_TOKEN }}
