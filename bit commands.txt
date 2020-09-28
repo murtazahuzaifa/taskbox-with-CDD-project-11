@@ -1,0 +1,19 @@
+npm install bit-bin -g    // to install bit
+bit login   // to login to bit account
+bit init
+bit init --package-manager yarn
+bit import first_collection.button/button --path src/cmp
+bit import bit.envs/compilers/react --compiler
+bit init --reset-hard
+bit import     // to pull changes from the remote.
+
+#### how to import and edit component ####
+bit init
+bit import <Organization-Name>.<Collection-Name>/<Component-Name>
+bit build
+bit tag <Component-Name> or bit tag --all
+bit export <Organization-Name>.<Collection-Name>
+
+
+#### How to checkout to other versions ####
+bit checkout <version> <component-name>
