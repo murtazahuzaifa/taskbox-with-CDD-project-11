@@ -14,9 +14,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      # - uses: borales/actions-yarn@v2.0.0
-        # with:
-          # cmd: install # will run `yarn install` command
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install # will run `yarn install` command
 
       - uses: chromaui/action@v1
         # options required to the GitHub chromatic action
@@ -25,4 +25,4 @@ jobs:
           # refer to https://www.learnstorybook.com/intro-to-storybook/react/en/deploy/
           projectToken: ${{ secrets.CHROMATIC_TOKEN }}
           token: ${{ secrets.CHROMATIC_TOKEN }}
-          # cmd: chromatic --project-token=${{ secrets.CHROMATIC_TOKEN }}
+          cmd: chromatic --project-token=${{ secrets.CHROMATIC_TOKEN }}
