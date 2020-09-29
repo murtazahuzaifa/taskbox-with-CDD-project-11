@@ -1,9 +1,7 @@
 # name of our action
 name: 'Storybook Deployment on Chromatic'
 # the event that will trigger the action
-on:
-  push:
-    branches: [ master ]
+on: push
 
 jobs:
   test:
