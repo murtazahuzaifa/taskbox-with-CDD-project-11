@@ -18,14 +18,14 @@ const slice = createSlice({
     initialState: defaultTasks,
     reducers: {
         archiveTask: (state, { payload }: PayloadAction<string>) => {
-            state = {
+            return {
                 tasks: state.tasks.map(task =>
                     task.id === payload ? { ...task, state: "TASK_ARCHIVED" } : task
                 ),
             };
         },
         pinTask: (state, { payload }: PayloadAction<string>) => {
-            state = {
+            return {
                 tasks: state.tasks.map(task =>
                     task.id === payload ? { ...task, state: "TASK_PINNED" } : task
                 ),
