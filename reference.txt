@@ -4,3 +4,4 @@ https://docs.bit.dev/docs/tutorials/bit-react-tutorial
 
 https://blog.bitsrc.io/how-to-easily-share-react-components-between-projects-3dd42149c09
 
+https://medium.com/@vagacoder/how-to-use-react-and-typescript-in-bit-dev-89a1260d2d9f

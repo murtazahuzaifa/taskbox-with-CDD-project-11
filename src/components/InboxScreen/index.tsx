@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import TaskList from './TaskList';
+import TaskList from '../TaskList';
 // import { connect } from 'react-redux';
 
 export interface PropType { error?: string | null }

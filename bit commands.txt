@@ -3,7 +3,10 @@ bit login   // to login to bit account
 bit init
 bit init --package-manager yarn
 bit import first_collection.button/button --path src/cmp
+
 bit import bit.envs/compilers/react --compiler
+bit import -c bit.envs/compilers/react-typescript
+
 bit init --reset-hard
 bit import     // to pull changes from the remote.
 

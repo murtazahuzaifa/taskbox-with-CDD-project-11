@@ -5,7 +5,7 @@ import * as TaskStories from './Task.stories';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
 export default {
-    title: 'Task List',
+    title:  'Task List',
     component: TaskList,
     excludeStories: ['WithPinnedTasksArgs', "tasks", ],
     decorators: [story => <div style={{ padding: '3rem' }} >{story()}</div>],

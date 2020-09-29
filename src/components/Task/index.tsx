@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-
+import './index.css';
 export type TaskState = 'TASK_INBOX' | 'TASK_PINNED' | 'TASK_ARCHIVED'
 export interface TaskType {
     id: string,
