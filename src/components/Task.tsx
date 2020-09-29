@@ -22,7 +22,7 @@ const Task: FC<PropType> = ({ task: { id, title, state }, onPinTask, onArchiveTa
                 <span className="checkbox-custom" onClick={() => { onArchiveTask(id) }} />
             </label>
             <div className="title">
-                <input type="text" value={title} readOnly placeholder='Input title' style={{ background: 'red' }} />
+                <input type="text" value={title} readOnly placeholder='Input title' style={{ textOverflow: 'ellipsis' }} />
             </div>
 
             <div className="actions" onClick={event => event.stopPropagation()} >
